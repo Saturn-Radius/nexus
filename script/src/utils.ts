@@ -95,7 +95,7 @@ export async function calc_fee_and_send_tx(lcd_client: LCDClient, sender: Wallet
 async function get_tx_fee(lcd_client: LCDClient, sender: Wallet, msgs: Msg[]): Promise<StdFee | undefined> {
 	try {
 		const estimated_fee_res = await lcd_client.tx.estimateFee(sender.key.accAddress, msgs, {
-			gasPrices: new Coins([new Coin("uluna", 0.113303)]),
+			gasPrices: new Coins([new Coin("uluna", 0.0113303)]),
 			gasAdjustment: 1.2,
 			feeDenoms: ["uluna"],
 		});
